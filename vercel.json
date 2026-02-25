@@ -2,11 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/server.ts",
-      "use": "@vercel/node",
-      "config": {
-        "runtime": "nodejs20.x"
-      }
+      "src": "package.json",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -14,8 +11,5 @@
       "src": "/(.*)",
       "dest": "src/server.ts"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "DATABASE_URL"
-  }
+  ]
 }
